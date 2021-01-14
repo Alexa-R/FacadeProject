@@ -2,11 +2,11 @@
 {
     public class VideoFile
     {
-        private string _fileName;
-
         public VideoFile(string fileName)
         {
-            this._fileName = fileName;
+            this.FileName = fileName;
         }
+        public string FileName { get; set; }
+
     }
 }

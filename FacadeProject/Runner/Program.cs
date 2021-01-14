@@ -1,4 +1,4 @@
-﻿namespace FacadeProject
+﻿namespace FacadeProject.Runner
 {
     public class Program
     {

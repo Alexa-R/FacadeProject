@@ -9,8 +9,7 @@ namespace FacadeProject
 
         public void Convert(string filename, string format)
         {
-            Console.WriteLine("File's name = {0}, file's format = {1}", filename, format);
-            Console.WriteLine("File conversion started...");
+            Console.WriteLine($"File's name = {filename}, file's format = {format}");
             if (format.Equals("mp4"))
             {
                 _codec = new Mpeg4Codec();
