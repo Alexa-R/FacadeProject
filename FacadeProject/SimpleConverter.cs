@@ -10,13 +10,17 @@ namespace FacadeProject
         public void Convert(string filename, string format)
         {
             Console.WriteLine($"File's name = {filename}, file's format = {format}");
-            if (format.Equals("mp4"))
+            switch (format)
             {
-                _codec = new Mpeg4Codec();
-            }
-            else
-            {
-                _codec = new OggCodec();
+                case "mp4":
+                    _codec = new Mpeg4Codec();
+                    break;
+                case "ogg":
+                    _codec = new OggCodec();
+                    break;
+                default:
+                    Console.WriteLine("Incorrect format entered!");
+                    break;
             }
 
             Console.WriteLine(_codec.GetType().Name + " is used for conversion");
